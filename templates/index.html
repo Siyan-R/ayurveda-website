@@ -18,14 +18,13 @@
         
         <nav class="nav-links">
             <ul>
-                <li><a href="#home-section">Home</a></li>
-                <li><a href="#" class="open-popup-link" data-modal-id="about-modal">About the App</a></li>
-                <li><a href="#" class="open-popup-link" data-modal-id="howto-modal">How to Use</a></li>
-                <li><a href="#" class="open-popup-link" data-modal-id="benefits-modal">Ayurveda Benefits</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('mental') }}">Mental Health</a></li>
+                <li><a href="{{ url_for('oral') }}">Oral Health</a></li>
+                <li><a href="{{ url_for('skin') }}">Skin Health</a></li>
+                <li><a href="#" class="open-popup-link" data-modal-id="about-modal">About</a></li>
                 <li><a href="#contact-footer">Contact</a></li>
-      
-                 <a href="{{ url_for('login_page') }}">Login</a>
-
+                <li><a href="{{ url_for('login_page') }}">Login</a></li>
             </ul>
         </nav>
 

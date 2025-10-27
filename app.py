@@ -57,7 +57,6 @@ def mental():
 def oral():
     return render_template('oral.html')
 
-
 @app.route('/skin')
 def skin():
     return render_template('skin.html')
@@ -83,7 +82,11 @@ def search_plants():
             "model": p.get("model", ""),
             "image": p.get("image", "")
         }
-        for p in plants if query in p["name"].lower()
+        for p in plants 
+        if query in p["name"].lower() or 
+           query in p.get("info", "").lower() or
+           query in p.get("uses", "").lower() or
+           query in p.get("benefits", "").lower()
     ]
     return jsonify(results)
 
